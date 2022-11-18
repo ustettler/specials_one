@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
 import type { MeUser } from './app.service';
+import { AppService, Article } from './app.service';
 
 @Controller()
 export class AppController {
@@ -9,5 +9,10 @@ export class AppController {
   @Get('user/me')
   getMe(): MeUser {
     return this.appService.getMe();
+  }
+
+  @Get('articles')
+  getAllArticles(): Article[] {
+    return this.appService.getAllArticles();
   }
 }
