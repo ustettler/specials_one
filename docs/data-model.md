@@ -1,4 +1,4 @@
-#Data Model
+# Data Model
 
 <!-- GET current logged in user -->
 
